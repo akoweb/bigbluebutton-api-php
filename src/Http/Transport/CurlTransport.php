@@ -30,7 +30,7 @@ use BigBlueButton\Util\ArrayHelper;
 final class CurlTransport implements TransportInterface
 {
     public const DEFAULT_CURL_OPTIONS = [
-        CURLOPT_SSL_VERIFYPEER => 1,
+        CURLOPT_SSL_VERIFYPEER => 0, // 0 for localhost ~ 1 for server
         CURLOPT_CONNECTTIMEOUT => self::DEFAULT_CONNECT_TIMEOUT,
         CURLOPT_TIMEOUT        => self::DEFAULT_TIMEOUT,
     ];
